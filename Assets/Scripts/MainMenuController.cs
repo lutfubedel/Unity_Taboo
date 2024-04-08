@@ -11,14 +11,14 @@ public class MainMenuController : MonoBehaviour
     [SerializeField] private GameObject[] panels;
 
     [Header("Settings Sliders")]
-    [SerializeField] private Slider sliderMusic;
     [SerializeField] private Slider sliderTime;
     [SerializeField] private Slider sliderPass;
+    [SerializeField] private Slider sliderRound;
 
     [Header("Settings Values")]
-    [SerializeField] private TMP_Text musicValue;
     [SerializeField] private TMP_Text timeValue;
     [SerializeField] private TMP_Text passValue;
+    [SerializeField] private TMP_Text roundValue;
 
     [Header("TeamNaming Parameters")]
     [SerializeField] private TMP_InputField inputTeam1Name;
@@ -27,9 +27,9 @@ public class MainMenuController : MonoBehaviour
 
     private void Start()
     {
-        sliderMusic.value = PlayerPrefs.GetFloat("Music");
         sliderTime.value = PlayerPrefs.GetFloat("Time");
         sliderPass.value = PlayerPrefs.GetFloat("Pass");
+        sliderRound.value = PlayerPrefs.GetFloat("Round");
     }
 
 
@@ -39,20 +39,17 @@ public class MainMenuController : MonoBehaviour
         TeamNameSettings();
     }
 
-
-
-
     private void SliderSettings()
     {
         if(panels[1].activeInHierarchy)
         {
-            musicValue.text = Mathf.Round(sliderMusic.value).ToString();
             timeValue.text = Mathf.Round(sliderTime.value).ToString();
             passValue.text = Mathf.Round(sliderPass.value).ToString();
+            roundValue.text = Mathf.Round(sliderRound.value).ToString();
 
-            PlayerPrefs.SetFloat("Music", sliderMusic.value);
             PlayerPrefs.SetFloat("Time", sliderTime.value);
             PlayerPrefs.SetFloat("Pass", sliderPass.value);
+            PlayerPrefs.SetFloat("Round", sliderRound.value);
         }
     }
 
@@ -64,30 +61,6 @@ public class MainMenuController : MonoBehaviour
             PlayerPrefs.SetString("Team2Name", inputTeam2Name.text);
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     public void OpenSettingsMenu()
     {
