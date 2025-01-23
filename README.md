@@ -35,19 +35,15 @@ Bu proje, Unity kullanılarak mobil cihazlar için geliştirilen bir **Taboo** o
 <div style="display: flex; justify-content: space-around;">
   <img src="./images/img_1.jpg" alt="Ana Menü" width="400">
   <img src="./images/img_2.jpg" alt="Ayarlar" width="400">
-</div>
-
-<div style="display: flex; justify-content: space-around;">
   <img src="./images/img_3.jpg" alt="Takımlar" width="400">
-  <img src="./images/img_4.jpg" alt="Oyun" width="400">
 </div>
 
 <div style="display: flex; justify-content: space-around;">
+  <img src="./images/img_4.jpg" alt="Oyun" width="400">
   <img src="./images/img_5.jpg" alt="Durdurma Ekranı" width="400">
   <img src="./images/img_6.jpg" alt="Oyun Sonu" width="400">
 </div>
 
 
 ## Lisans
-
 Bu proje, [MIT Lisansı](LICENSE) kapsamında lisanslanmıştır.
